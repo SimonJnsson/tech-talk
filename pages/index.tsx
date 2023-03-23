@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
+import Calculator from '../components/calculator'
+import CalculatorPretty from '@/components/calculator-pretty'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -13,9 +16,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="flex items-center justify-center h-screen bg-gray-200">
-          <h1 className="text-5xl font-bold text-gray-800">Hello Tech Talk!</h1>
-        </div>
+
+      <button className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click me
+      </button>
+
+        <Calculator />
+        <CalculatorPretty />
       </main>
     </>
   )
